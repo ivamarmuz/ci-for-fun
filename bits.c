@@ -19,9 +19,7 @@ int main()
 
 void printBits(int numb)
 {
-    int c, i = 1 << BITS_COUNT;
-
-    printf("%d = ", numb);
+    int c, forPrint =  numb, i = 1 << BITS_COUNT;
 
     for (c = 0; c <= BITS_COUNT; c++) {
         numb & i ? printf("1") : printf("0");
@@ -31,7 +29,7 @@ void printBits(int numb)
         }
     }
 
-    printf("\n");
+    printf("(%d)\n", forPrint);
 }
 
 int reverseBits(int numb)
